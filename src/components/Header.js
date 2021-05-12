@@ -47,6 +47,17 @@ const Header = () => {
                   Blocks
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link
+                  to="/dapp"
+                  className={`nav-link ${
+                    location.pathname === "/dapp" && "active"
+                  }`}
+                  aria-current="page"
+                >
+                  DApp
+                </Link>
+              </li>
             </ul>
             <form className="d-flex">
               <input
