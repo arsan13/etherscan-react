@@ -1,12 +1,17 @@
-import Accounts from "./Accounts";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./Header";
+import Accounts from "./Accounts";
+import Blocks from "./Blocks";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Accounts />
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <Route path={["/", "/accounts"]} exact component={Accounts} />
+        <Route path="/blocks" component={Blocks} />
+      </div>
+    </Router>
   );
 }
 
